@@ -1,4 +1,4 @@
-OM centos:7
+FROM centos:7
 MAINTAINER MMIITTUULL006@GMAIL.COM  
 RUN yum install -y httpd
 RUN yum install -y zip
