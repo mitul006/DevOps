@@ -1,0 +1,13 @@
+---
+version: '3'
+services:
+  docker-host:
+    tasks:
+      - name: stop container
+        shell: docker container stop cloudknowledge
+      - name: remove container
+        shell: docker container rm cloudknowledge
+      - name: remove docker image
+        shell: docker image rmi mitul006/cloudknowledge
+      - name: create new container
+        shell: docker container run -itd --name cloudknowledge-container -p 9000:80 mitul006/cloudknowledge
